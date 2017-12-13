@@ -2,7 +2,7 @@ Example 1.1 - first steps
 =========================
 
 .. code_example:: pycon
-:name: prints
+    :name: prints
 
     print("Hello, World!")
     print("Another line?")

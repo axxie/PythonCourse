@@ -5,7 +5,7 @@ Programming for kids
     :maxdepth: 2
     :caption: Contents:
 
-        setup
+    setup
     ex1.1
 
 
