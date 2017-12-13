@@ -9,9 +9,3 @@ Programming for kids
     ex1.1
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

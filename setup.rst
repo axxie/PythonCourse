@@ -16,7 +16,7 @@ Required software
 
 Download and install the latest version: https://www.python.org/downloads/
 
-Make sure you select and install version 3, *not version 2*.
+Make sure you select and install version 3, **not version 2**.
 
 |
 
