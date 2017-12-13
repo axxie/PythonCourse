@@ -12,3 +12,4 @@ Example 1.1 - first steps
 Run the above example and you should see this:
 
 .. code_output:: prints
+
