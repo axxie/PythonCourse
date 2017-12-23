@@ -19,7 +19,7 @@
  * least one such produced HTML document is placed.
  */
 
-BODY.hrdBody { color: #a9b7c6; background: #282b2e; }
+BODY.hrdBody { color: #a9b7c6; background: #282b2e; width:640px;}
 PRE.hrdText {
  font-family: Consolas, monospace; font-size: 14pt;
  font-weight: normal; font-style: normal; text-decoration: none; }

@@ -12,7 +12,6 @@ Required software
 |
 
 .. image:: _static/images/python.png
-    :height: 80
 
 Download and install the latest version: https://www.python.org/downloads/
 
@@ -21,7 +20,6 @@ Make sure you select and install version 3, **not version 2**.
 |
 
 .. image:: _static/images/pycharm.png
-    :height: 50
 
 There is a community edition freely available for personal use: https://www.jetbrains.com/pycharm/download/
 
