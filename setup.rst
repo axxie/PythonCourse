@@ -27,6 +27,8 @@ There is a community edition freely available for personal use: https://www.jetb
 
 Download and install it.
 
+.. _create-project:
+
 Create project
 --------------
 

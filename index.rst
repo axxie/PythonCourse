@@ -6,6 +6,6 @@ Programming for kids
     :caption: Contents:
 
     setup
-    ex1.1
+    lesson1
 
 
