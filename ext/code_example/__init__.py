@@ -30,10 +30,7 @@ class AutoRun(object):
     pycon = os.path.join(os.path.dirname(here), 'pycon.py')
     config = dict(
         pycon='python ' + pycon,
-        pycon_prefix_chars=0,
-        pycon_show_source=False,
-        console='bash',
-        console_prefix_chars=1,
+        logo='logo ' + pycon,
     )
 
     @classmethod
@@ -52,9 +49,19 @@ class CodeOutput(Directive):
     final_argument_whitespace = False
 
     def run(self):
-        code_out = codeout_node()
-        code_out['ref'] = self.arguments[0]
-        return [code_out]
+        env = self.state.document.settings.env
+        content = []
+        codeblock = env.code_outs[self.arguments[0]]
+        code_out_text = execute_codeblock(codeblock)
+        if codeblock["language"] == "logo":
+            element = nodes.image(uri=codeblock["screenshot_path"])
+        else:
+            element = nodes.literal_block(code_out_text, code_out_text)
+            element['language'] = "console"
+            element['linenos'] = False
+        content.append(element)
+
+        return content
 
 
 def render_source(source, image_path):
@@ -108,21 +115,26 @@ class RunBlock(Directive):
 
         name = self.options.get('name')
         if name:
-            env.code_outs[name] = code
+            screenshot_path = os.path.join(statics_dir_path, "screenshot_%s.png" % key)
+            env.code_outs[name] = dict(code=code, language=language, screenshot_path=screenshot_path)
 
         return [image]
 
 
-def execute_codeblock(code):
+def execute_codeblock(codeblock):
+    code = codeblock["code"]
     config = AutoRun.config
     args = config['pycon'].split()
     # Build the code text
-    proc = Popen(args, bufsize=1, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    env = os.environ.copy()
+    env["SCREENSHOT_PATH"] = codeblock["screenshot_path"]
+    proc = Popen(args, bufsize=1, stdin=PIPE, stdout=PIPE, stderr=PIPE, env=env)
 
     # Run the code
     stdout, stderr = proc.communicate(code)
 
     # Process output
+    out = " "
     if stdout:
         out = stdout.decode("utf-8")
     if stderr:
@@ -134,25 +146,13 @@ def execute_codeblock(code):
     if code_out_text[0] == '\n':
         code_out_text = code_out_text[1:]
 
+    proc.wait()
+
     return code_out_text
-
-
-def process_codeblock_nodes(app, doctree, fromdocname):
-    env = app.builder.env
-
-    for node in doctree.traverse(codeout_node):
-        content = []
-        code_out_text = execute_codeblock(env.code_outs[node['ref']])
-        literal = nodes.literal_block(code_out_text, code_out_text)
-        literal['language'] = "console"
-        literal['linenos'] = False
-        content.append(literal)
-        node.replace_self(content)
 
 
 def setup(app):
     app.add_directive('code_example', RunBlock)
     app.add_directive('code_output', CodeOutput)
     app.connect('builder-inited', AutoRun.builder_init)
-    app.connect('doctree-resolved', process_codeblock_nodes)
     app.add_config_value('code_example_languages', AutoRun.config, 'env')

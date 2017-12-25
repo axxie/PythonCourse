@@ -1,16 +1,13 @@
 import sys
+import os
 
 
 def main():
     try:
-        source_lines = (line.rstrip() for line in sys.stdin)
+        source_lines = sys.stdin.readlines()
         source = ''
-        try:
-            while True:
-                source += next(source_lines) + "\n"
-        except StopIteration:
-            source = source[:-1]
-            exec(source, {})
+        source += "\n".join(source_lines)
+        exec(source, {})
     except Exception as e:
         print(e)
 
