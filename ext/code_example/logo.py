@@ -140,8 +140,8 @@ def main():
 
                     for line in t.lines:
                         if line.is_down:
-                            pygame.draw.line(screen, line.color, (x + line.x1, y + line.y1),
-                                             (x + line.x2, y + line.y2), line.width)
+                            pygame.draw.aaline(screen, line.color, (x + line.x1, y + line.y1),
+                                               (x + line.x2, y + line.y2), line.width)
                 pygame.display.flip()
                 if screenshot_path:
                     pygame.image.save(screen, screenshot_path)
