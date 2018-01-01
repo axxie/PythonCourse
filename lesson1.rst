@@ -39,8 +39,8 @@ Run the above example and you should see this:
 
 Try to experiment a little. What would happen, if you forget to type ``)`` or ``"``?
 
-Lesson 1 - commenting
----------------------
+Commenting
+----------
 
 Put the octothorpe character ('#') as the first character on the second line and run the programm:
 
@@ -71,8 +71,8 @@ new things.
 Another good reason to use #, is to provide explanations about the code inside the code itself. This is called
 commenting.
 
-Lesson 1 - copying and pasting
-------------------------------
+Copying and pasting
+-------------------
 
 If you want to repeat some code, you can use copy-pasting. First you copy the portion of the code into so-called
 `clipboard`, put the cursor into destination, and paste copied code from the clipboard to the destination. Here is
