@@ -28,6 +28,9 @@ contents after pressing ``Shift+F10``:
 
 .. code_output:: logo_fw
 
+Lesson 2 - copying and pasting
+------------------------------
+
 Now, use ``Ctrl+C`` - ``Ctrl+V`` sequence to have `fw(50)` three times, like below:
 
 .. code_example:: logo
@@ -47,6 +50,9 @@ If you press ``Shift+F10``, you should the same picture, but the line is three t
 
 The reason is that our `fw(50)` command in fact instructs a virtual robot called 'turtle' to walk forward by
 50 pixels, drawing the line on the ground (screen) at the same time.
+
+Lesson 2 - commenting
+---------------------
 
 As you might expect, if we comment one line out, the total length will be two times longer than original:
 

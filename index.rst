@@ -8,5 +8,6 @@ Programming for kids
     setup
     lesson1
     lesson2
+    lesson3
 
 
