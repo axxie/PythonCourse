@@ -51,6 +51,23 @@ class Turtle(object):
     def color(self, c):
         self.cur_color = c
 
+    def circle(self, radius, extent=None):
+        if extent is None:
+            extent = 360.0
+        frac = abs(extent) / 360.0
+        steps = 1 + int(max(11 + abs(radius), 5) * frac)
+        w = 1.0 * extent / steps
+        w2 = 0.5 * w
+        l = 2.0 * radius * sin(w2 * pi / 180.0)
+        if radius < 0:
+            l, w, w2 = -l, -w, -w2
+
+        self.left(w2)
+        for i in range(steps):
+            self.fw(l)
+            self.left(w)
+        self.right(w2)
+
     def _update(self, new_x, new_y):
         self.lines.append(Line(self.x, self.y, new_x, new_y, self.is_down, self.cur_width, self.cur_color))
         self.x = new_x
@@ -86,6 +103,10 @@ def width(w):
 
 def color(c):
     default.color(c)
+
+
+def circle(radius, extent):
+    default.circle(radius, extent)
 
 
 def main():
