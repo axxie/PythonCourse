@@ -16,11 +16,11 @@ an example below:
 
     from logo import *
 
-    fw(50)
+    fd(50)
     left(90)
-    fw(50)
+    fd(50)
     right(90)
-    fw(50)
+    fd(50)
 
     main()
 
@@ -39,13 +39,13 @@ A square
 
     from logo import *
 
-    fw(100)
+    fd(100)
     left(90)
-    fw(100)
+    fd(100)
     left(90)
-    fw(100)
+    fd(100)
     left(90)
-    fw(100)
+    fd(100)
     left(90)
 
     main()
@@ -58,11 +58,11 @@ A triangle
 
     from logo import *
 
-    fw(100)
+    fd(100)
     left(120)
-    fw(100)
+    fd(100)
     left(120)
-    fw(100)
+    fd(100)
     left(120)
 
     main()
@@ -76,15 +76,15 @@ An interesting figure
     from logo import *
 
     left(60)
-    fw(100)
+    fd(100)
     right(120)
-    fw(100)
+    fd(100)
     left(120)
-    fw(100)
+    fd(100)
     right(120)
-    fw(100)
+    fd(100)
     left(120)
-    fw(100)
+    fd(100)
 
     main()
 
@@ -95,15 +95,15 @@ This time you can just copy and paste the program from here::
 
     from logo import *
 
-    fw(100)
+    fd(100)
     right(144)
-    fw(100)
+    fd(100)
     right(144)
-    fw(100)
+    fd(100)
     right(144)
-    fw(100)
+    fd(100)
     right(144)
-    fw(100)
+    fd(100)
     right(144)
 
     main()
@@ -124,29 +124,29 @@ This allows to draw disjoint figures, such as the following:
 
     from logo import *
 
-    fw(100)
+    fd(100)
     left(90)
-    fw(80)
+    fd(80)
     left(90)
-    fw(100)
+    fd(100)
     left(90)
-    fw(80)
+    fd(80)
     left(90)
 
     up()
-    fw(20)
+    fd(20)
     left(90)
-    fw(20)
+    fd(20)
     right(90)
     down()
 
-    fw(60)
+    fd(60)
     left(90)
-    fw(40)
+    fd(40)
     left(90)
-    fw(60)
+    fd(60)
     left(90)
-    fw(40)
+    fd(40)
     left(90)
 
     main()

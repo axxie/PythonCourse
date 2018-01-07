@@ -28,7 +28,7 @@ class Turtle(object):
         self.cur_color = (255, 255, 255)
         Turtle.all.append(self)
 
-    def fw(self, px):
+    def fd(self, px):
         new_x = self.x + px * cos(self.angle)
         new_y = self.y - px * sin(self.angle)
         self._update(new_x, new_y)
@@ -64,9 +64,16 @@ class Turtle(object):
 
         self.left(w2)
         for i in range(steps):
-            self.fw(l)
+            self.fd(l)
             self.left(w)
         self.right(w2)
+
+    def goto(self, x, y):
+        self.x = x
+        self.y = y
+
+    def seth(self, angle):
+        self.angle = angle * pi / 180
 
     def _update(self, new_x, new_y):
         self.lines.append(Line(self.x, self.y, new_x, new_y, self.is_down, self.cur_width, self.cur_color))
@@ -77,8 +84,8 @@ class Turtle(object):
 default = Turtle()
 
 
-def fw(px):
-    default.fw(px)
+def fd(px):
+    default.fd(px)
 
 
 def left(angle):
@@ -107,6 +114,14 @@ def color(c):
 
 def circle(radius, extent):
     default.circle(radius, extent)
+
+
+def goto(x, y):
+    default.goto(x, y)
+
+
+def seth(angle):
+    default.seth(angle)
 
 
 def main():
@@ -141,7 +156,7 @@ def main():
                     for line in t.lines:
                         if line.is_down:
                             pygame.draw.aaline(screen, line.color, (x + line.x1, y + line.y1),
-                                               (x + line.x2, y + line.y2), line.width)
+                                               (x + line.x2, y + line.y2), 1)
                 pygame.display.flip()
                 if screenshot_path:
                     pygame.image.save(screen, screenshot_path)
