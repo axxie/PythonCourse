@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 4 - more logo &mdash; pycourse 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pycourse 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Lesson 5 - variables" href="lesson5.html"/>
+        <link rel="prev" title="Lesson 3 - arithmetic operations" href="lesson3.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pycourse
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Course setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson1.html">Lesson 1 - first steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson2.html">Lesson 2 - logo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson3.html">Lesson 3 - arithmetic operations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lesson 4 - more logo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#direction">Direction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-square">A square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-triangle">A triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#an-interesting-figure">An interesting figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-star">A star</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pen-control">Pen control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lesson5.html">Lesson 5 - variables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pycourse</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 4 - more logo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/lesson4.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-4-more-logo">
+<h1>Lesson 4 - more logo<a class="headerlink" href="#lesson-4-more-logo" title="Permalink to this headline">¶</a></h1>
+<p>It is time for more operations with logo. In addition to just moving forward and drawing, virtual robot (turtle)
+can do more sophisticated things.</p>
+<div class="section" id="direction">
+<h2>Direction<a class="headerlink" href="#direction" title="Permalink to this headline">¶</a></h2>
+<p>By issuing <cite>left</cite> and <cite>right</cite> commands we can instruct turtle to change direction. Both commands accept a single
+parameter - an angle. <cite>left</cite> turns turtle left by <cite>angle</cite> degrees, <cite>right</cite> does the same to the right. You can see
+an example below:</p>
+<img alt="_images/code_example_42fd66ee41a06a677a28be5e69354a1a7977095a.png" src="_images/code_example_42fd66ee41a06a677a28be5e69354a1a7977095a.png" />
+<p>This should produce the following polygonal line:</p>
+<img alt="_images/screenshot_42fd66ee41a06a677a28be5e69354a1a7977095a.png" src="_images/screenshot_42fd66ee41a06a677a28be5e69354a1a7977095a.png" />
+<p>That is getting interesting, huh?</p>
+<p>Let’s try drawing some more figures:</p>
+<div class="section" id="a-square">
+<h3>A square<a class="headerlink" href="#a-square" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/code_example_5bf994db5f81afc82ceb749cf96dcf8d2f5738f2.png" src="_images/code_example_5bf994db5f81afc82ceb749cf96dcf8d2f5738f2.png" />
+</div>
+<div class="section" id="a-triangle">
+<h3>A triangle<a class="headerlink" href="#a-triangle" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/code_example_1e3782b413bf9d771cb531ad176941034e5c0276.png" src="_images/code_example_1e3782b413bf9d771cb531ad176941034e5c0276.png" />
+</div>
+<div class="section" id="an-interesting-figure">
+<h3>An interesting figure<a class="headerlink" href="#an-interesting-figure" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/code_example_d1ed194bf2f610cb9e80b71882fb23180bda6164.png" src="_images/code_example_d1ed194bf2f610cb9e80b71882fb23180bda6164.png" />
+</div>
+<div class="section" id="a-star">
+<h3>A star<a class="headerlink" href="#a-star" title="Permalink to this headline">¶</a></h3>
+<p>This time you can just copy and paste the program from here:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">logo</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">fd</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">fd</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">fd</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">fd</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">fd</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pen-control">
+<h2>Pen control<a class="headerlink" href="#pen-control" title="Permalink to this headline">¶</a></h2>
+<p>The turtle can handle two more commands, <cite>up</cite> and <cite>down</cite>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>up</em> tells the turtle to stop drawing when it moves</li>
+<li><em>down</em> instructs the turtle to resume the drawing during move</li>
+</ul>
+</div></blockquote>
+<p>This allows to draw disjoint figures, such as the following:</p>
+<img alt="_images/code_example_6c316634ff104bec8bfd4db7793e0eced110e3ac.png" src="_images/code_example_6c316634ff104bec8bfd4db7793e0eced110e3ac.png" />
+<p>You should see two rectangles:</p>
+<img alt="_images/screenshot_6c316634ff104bec8bfd4db7793e0eced110e3ac.png" src="_images/screenshot_6c316634ff104bec8bfd4db7793e0eced110e3ac.png" />
+<p>Taking one of our first examples, imagine, what would be the picture created by the following program:</p>
+<img alt="_images/code_example_68ee8a46236aa153c09f3c58a223627240f9b245.png" src="_images/code_example_68ee8a46236aa153c09f3c58a223627240f9b245.png" />
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lesson5.html" class="btn btn-neutral float-right" title="Lesson 5 - variables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson3.html" class="btn btn-neutral" title="Lesson 3 - arithmetic operations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Axxie.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
