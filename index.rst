@@ -10,5 +10,6 @@ Programming for kids
     lesson2
     lesson3
     lesson4
+    lesson5
 
 

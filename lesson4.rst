@@ -155,3 +155,16 @@ You should see two rectangles:
 
 .. code_output:: logo_up_down
 
+Taking one of our first examples, imagine, what would be the picture created by the following program:
+
+.. code_example:: logo
+
+    from logo import *
+
+    fd(50)
+    up()
+    fd(50)
+    down()
+    fd(50)
+
+    main()
