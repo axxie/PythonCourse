@@ -20,3 +20,8 @@ Build using the following command:
     make html
 
 The resulting documentation will be available in _build folder
+
+Result
+======
+
+The resulting documentation is published here: https://axxie.github.io/PythonCourse/
